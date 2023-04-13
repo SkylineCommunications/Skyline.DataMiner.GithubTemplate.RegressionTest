@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Skyline.DataMiner.Utils.QAPortalAPI</name>
+    </assembly>
+    <members>
+        <member name="T:QAPortalAPI.APIHelper.IQaPortalApiHelper">
+            <summary>
+            Interface for the QAPortalAPIHelper
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.APIHelper.IQaPortalApiHelper.PostResult(QAPortalAPI.Models.ReportingModels.TestReport)">
+            <summary>
+            Send the result (if valid) to the QAPortal via the chosen way.
+            </summary>
+            <param name="testResult">The testReport to send</param>
+            <exception cref="T:System.Exception">Throws an exception when the test result that is being send is invalid.</exception>
+        </member>
+        <member name="T:QAPortalAPI.APIHelper.QaPortalApiHelper">
+            <summary>
+            This class helps with reporting the test reports to the QAPortal
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.APIHelper.QaPortalApiHelper.#ctor(System.Action{System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor for the QaPortalApiHelper, this will report directly to the public endpoint.
+            </summary>
+            <param name="logger">A logger function that will provide internal logs, can be null if no logging is needed.</param>
+            <param name="portalLink">The link to the QAPortal, as provided by Skyline Communications.</param>
+            <param name="clientId">The clientID, as provided by Skyline Communications.</param>
+            <param name="apiKey">The APIKey, as provided by Skyline Communications.</param>
+            <param name="proxyUrl">An optional proxyURL.</param>
+        </member>
+        <member name="M:QAPortalAPI.APIHelper.QaPortalApiHelper.#ctor(System.Action{System.String},System.String,System.String,System.String,QAPortalAPI.Senders.EmailDelegate)">
+            <summary>
+            Constructor for the QaPortalApiHelper, this will report via email to the QAPortal.
+            </summary>
+            <param name="logger">A logger function that will provide internal logs, can be null if no logging is needed.</param>
+            <param name="portalLink">The link to the QAPortal, as provided by Skyline Communications.</param>
+            <param name="clientId">The clientID, as provided by Skyline Communications.</param>
+            <param name="apiKey">The APIKey, as provided by Skyline Communications.</param>
+            <param name="sendEmail">An action that can send an email, e.g. engine.SendEmail</param>
+        </member>
+        <member name="M:QAPortalAPI.APIHelper.QaPortalApiHelper.#ctor(System.Action{System.String},System.String,QAPortalAPI.Senders.ISender)">
+            <summary>
+            Used for unit testing only!
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.APIHelper.QaPortalApiHelper.PostResult(QAPortalAPI.Models.ReportingModels.TestReport)">
+            <inheritdoc/>
+        </member>
+        <member name="M:QAPortalAPI.DataMinerHelpers.DataMinerHelper.RetrieveDataMinerVersion(System.String@)">
+            <summary>
+            This function will return the last installed DataMinerVersion
+            It will include CU and hotfix version (if one is installed)
+            </summary>
+            <returns>The DataMinerversion in the format a.b.c.d-[BuildNr]-[HF package name]</returns>
+        </member>
+        <member name="T:QAPortalAPI.Enums.Result">
+            <summary>
+            This enumerable marks the status of a test case
+            </summary>
+        </member>
+        <member name="F:QAPortalAPI.Enums.Result.Unknown">
+            <summary>
+            The result is unknown
+            </summary>
+        </member>
+        <member name="F:QAPortalAPI.Enums.Result.Success">
+            <summary>
+            The test-case has run successfully
+            </summary>
+        </member>
+        <member name="F:QAPortalAPI.Enums.Result.Failure">
+            <summary>
+            The test-case has failed.
+            </summary>
+        </member>
+        <member name="T:QAPortalAPI.Models.AViewModel">
+            <summary>
+            The base class for the objects that are send to the QAPortal.
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.AViewModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.AViewModel.ToJson">
+            <summary>
+            Converts to object to a Json object, 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport">
+            <summary>
+            The object used for reporting performance test results to the portal. 
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.#ctor(System.String,QAPortalAPI.Enums.Result,System.String,QAPortalAPI.Enums.ResultUnit,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="testCaseName">Name of the performance test-case/result.</param>
+            <param name="testCaseResult">The result of the test case, fail or success.</param>
+            <param name="testCaseResultInfo">Information about the value, what it is, how it is measured,...</param>
+            <param name="unit">The unit of the measured value.</param>
+            <param name="timingResult">The value that was measured for the test.</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.TestCaseName">
+            <summary>
+            This is the name of your test-case.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.TestCaseResult">
+            <summary>
+            This is the result of your test-case.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.TestCaseResultInfo">
+            <summary>
+            This is the failure or success message that will be stored in the portal.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.Unit">
+            <summary>
+            Test result unit
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.Timing">
+            <summary>
+            Non-timing test result
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.Date">
+            <summary>
+            The UTC time the test-case result was reported.
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.IsValid(System.String@)">
+            <summary>
+            This checks if the performance test-case result is valid.
+            </summary>
+            <param name="validationInfo">If the performance test-case result is invalid this will contain the reason why.</param>
+            <returns>True when valid, false when not.</returns>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.CreateSuccesTestcase(System.String,System.TimeSpan)">
+            <summary>
+            Creates a performance test-case report object that is marked as successful for a timing result.
+            </summary>
+            <param name="testCaseName">Name of the test case.</param>
+            <param name="time">A timespan object.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">When the test-case name is null, empty or whitespace.</exception>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.PerformanceTestCaseReport.CreateFailedTestcase(System.String,System.String,System.TimeSpan)">
+            <summary>
+            Creates a performance test-case report object that is marked as failed for a timing result.
+            </summary>
+            <param name="testCaseName">Name of the test case.</param>
+            <param name="testCaseResultInfo">Information about the failed result. </param>
+            <param name="time">A timespan object.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">When the test-case name is null, empty or whitespace.</exception>
+        </member>
+        <member name="T:QAPortalAPI.Models.ReportingModels.TestCaseReport">
+            <summary>
+            Class to store the test-case information.
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestCaseReport.#ctor(System.String,QAPortalAPI.Enums.Result,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="testCaseName">Name of the test-case, must be unique for the entire test.</param>
+            <param name="testCaseResult">The result of the test case.</param>
+            <param name="testCaseResultInfo">Information about the result of the test-case, can be null, empty or whitespace for a success result.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestCaseReport.TestCaseName">
+            <summary>
+            This is the name of your test-case.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestCaseReport.TestCaseResult">
+            <summary>
+            This is the result of your test-case.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestCaseReport.TestCaseResultInfo">
+            <summary>
+            This is the failure or success message that will be stored in the portal.
+            </summary>
+        </member>
+        <member name="F:QAPortalAPI.Models.ReportingModels.TestCaseReport._dateString">
+            <summary>
+            This is the date the test-case result was reported.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestCaseReport.DateString">
+            <summary>
+            This property is used to serialize the date. When it is deserialized it will be converted to a DateTime. 
+            It will escape a new line and carriage return and spaces. These characters can be added when the json that was send via email 
+            is to long for a single line. This is also to make sure that when the object is serialized again we don't serialize these invalid characters.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestCaseReport.Date">
+            <summary>
+            The UTC time the test-case result was reported.
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestCaseReport.IsValid(System.String@)">
+            <summary>
+            This checks if the test-case result is valid.
+            </summary>
+            <param name="validationInfo">If test-case result is invalid this will contain the reason why.</param>
+            <returns>True when valid, false when not.</returns>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestCaseReport.GetSuccessTestCase(System.String)">
+            <summary>
+             Returns a success test-case report, for the specific test-case.
+            </summary>
+            <param name="testCaseName">Name of the test-case.</param>
+            <returns></returns>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestCaseReport.GetFailTestCase(System.String,System.String)">
+            <summary>
+            Returns a failed test-case report, for the specific test-case with the info. 
+            </summary>
+            <param name="testCaseName">Name of the test-case.</param>
+            <param name="failureInfo">Failure info</param>
+            <returns></returns>
+        </member>
+        <member name="T:QAPortalAPI.Models.ReportingModels.TestInfo">
+            <summary>
+            The class contains all information about the test that is needed for the QAPortal.
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestInfo.#ctor(System.String,System.String,System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            Constructor for the TestInfo object.
+            </summary>
+            <param name="testName">The name of the test.</param>
+            <param name="domain">The Skyline Communications domain (name or email) that is responsible test. </param>
+            <param name="projectIDs">The projectIDs where the test is linked to. (Same as the DCP project ID).</param>
+            <param name="testDescription">The test description, what will this test validate.</param>
+            <exception cref="T:System.ArgumentException">An argumentException is thrown when the given data is invalid.</exception>
+            <exception cref="T:System.ArgumentNullException">When projectIDs is null.</exception>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestInfo.TestName">
+            <summary>
+            The name of the test.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestInfo.Domain">
+            <summary>
+            The domain in Skyline Communications that is responsible for the follow-up.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestInfo.ProjectIDs">
+            <summary>
+            The Collaboration Project ID for which the test is build.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestInfo.TestDescription">
+            <summary>
+            The description of the test, fill in what it all does and validates.
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestInfo.IsValid(System.String@)">
+            <summary>
+            This checks the testInfo is correctly filled in.
+            </summary>
+            <param name="info">The validation information.</param>
+            <returns>True when the info is valid, false if not.</returns>
+        </member>
+        <member name="T:QAPortalAPI.Models.ReportingModels.TestReport">
+            <summary>
+            The test report class contains the status of the test and all the test cases. It also contains the test information. This object will then be send to the QAPortal. 
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestReport.#ctor(QAPortalAPI.Models.ReportingModels.TestInfo,QAPortalAPI.Models.ReportingModels.TestSystemInfo)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="testInfo">The info of the test.</param>
+            <param name="systemInfo">The information about the test system.</param>        
+            <exception cref="T:System.ArgumentException">An argument exception when the agentName is null, empty or whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">When the TestInfo is null.</exception>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestReport.TestInfo">
+            <summary>
+            The test information, this will be used to automatically add the test to the portal. 
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestReport.SystemInfo">
+            <summary>
+            The information about the test system.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestReport.TestResult">
+            <summary>
+            This property has the overall status of a test, if one test-case failed this status will also be marked as failed.
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestReport.TestCases">
+            <summary>
+            A list with all the test cases the result has. Do not add your results to this list use TryAddTestCase!
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestReport.PerformanceTestCases">
+            <summary>
+            All performance results for this test. 
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestReport.TryAddTestCase(QAPortalAPI.Models.ReportingModels.TestCaseReport,System.String@)">
+            <summary>
+            Try to add the test case to the test-case result, it will only be added when it is a valid test-case result.
+            </summary>
+            <param name="report">The test case report</param>
+            <param name="errorMessage">The error message when the test-case result can't be added.</param>
+            <returns>True if the result was added, false if not.</returns>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestReport.TryAddTestCase(QAPortalAPI.Models.ReportingModels.TestCaseReport)">
+            <summary>
+            Try to add the test case to the test-case result, it will only be added when it is a valid test-case result.
+            </summary>
+            <param name="report">The test case report</param>        
+            <returns>True if the result was added, false if not.</returns>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestReport.TryRemoveTestCase(System.String)">
+            <summary>
+            Tries to remove a test-case from the result
+            </summary>
+            <param name="testCaseName">Name of the test-case to remove</param>
+            <returns>True when test-case is removed, otherwise false.</returns>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestReport.IsValid(System.String@)">
+            <summary>
+            This checks the testInfo is correctly filled in. 
+            </summary>
+            <param name="info">The validation information.</param>
+            <returns>True when the info is valid, false if not.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:QAPortalAPI.Models.ReportingModels.TestSystemInfo">
+            <summary>
+            This class contains all information about the test system (DataMiner/solution version,agent name,...)
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestSystemInfo.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="DataMinerVersion">Version of the system in the format: [w].[x].[y].[z]-[buildNumber] or [w].[x].[y].[z]-[buildNumber]-[HotfixPackage name].</param>
+            <param name="agentName">Name of the agent as know on the portal!</param>
+            <exception cref="T:System.ArgumentException">When one of the arguments are not in the expected range.</exception>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestSystemInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="dataMinerVersion">Version of the system in the format: [w].[x].[y].[z]-[buildNumber] or [w].[x].[y].[z]-[buildNumber]-[HotfixPackage name].</param>
+            <param name="agentName">Name of the agent as know on the portal!</param>
+            <param name="hotfixVersion">The hot-fix version on the system.</param>
+            <exception cref="T:System.ArgumentException">When one of the arguments are not in the expected range.</exception>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestSystemInfo.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>        
+            <param name="agentName">Name of the agent as know on the portal!</param>
+            <exception cref="T:System.ArgumentException">When one of the arguments are not in the expected range.</exception>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestSystemInfo.AgentName">
+            <summary>
+            The Name of the cluster where the test runs on, this name should be the same as know on the portal!
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestSystemInfo.DataMinerVersion">
+            <summary>
+            The DataMiner version of the system. The DataMiner version in the format: [w].[x].[y].[z]-[buildNumber]
+            </summary>
+        </member>
+        <member name="P:QAPortalAPI.Models.ReportingModels.TestSystemInfo.HotfixVersion">
+            <summary>
+            The hot-fix version that is installed on the system. 
+            </summary>
+        </member>
+        <member name="M:QAPortalAPI.Models.ReportingModels.TestSystemInfo.IsValid(System.String@)">
+            <summary>
+            Checks if the system info is correct
+            </summary>
+            <param name="info">Info about the problems (if any)</param>
+            <returns>True when the object is valid false if not.</returns>
+        </member>
+        <member name="T:QAPortalAPI.Senders.MailReportCustomer">
+            <summary>
+            .Net 4.6 Duplicate of MailReportCustomer in ForwardService.
+            Avoids dependency on QAPortalAPI in ForwardService.
+            </summary>
+        </member>
+        <member name="T:QAPortalAPI.Senders.EmailDelegate">
+            <summary>
+            The email delegate that has to be provided to the EmailSender class.
+            </summary>
+            <param name="message">Message to send.</param>
+            <param name="subject">Subject to be used.</param>
+            <param name="to">Send to.</param>
+        </member>
+        <member name="M:QAPortalAPI.Senders.HttpSender.PostJson(System.String,System.String)">
+            <summary>
+            Posts JSON to the API and returns if the response status code was HTTP 200 OK
+            </summary>
+            <param name="url">Full URI</param>
+            <param name="body">JSON string</param>
+        </member>
+        <member name="M:QAPortalAPI.Senders.HttpSender.Post(System.String,System.Net.Http.HttpContent)">
+            <summary>
+            Posts to the API and returns if the response status code was HTTP 200 OK
+            </summary>
+            <param name="url">Full URI</param>
+            <param name="content">Body content</param>
+        </member>
+        <member name="M:QAPortalAPI.Senders.HttpSender.Post(System.String,QAPortalAPI.Models.ReportingModels.TestReport)">
+            <summary>
+            Posts to the API and returns the response
+            </summary>
+            <param name="url">Full URI</param>
+            <param name="report">ViewModel to post</param>
+        </member>
+        <member name="M:QAPortalAPI.Senders.HttpSender.PostResult(System.String,QAPortalAPI.Models.ReportingModels.TestReport)">
+            <summary>
+            Posts to URL and throws on failure, escapes '{' and '}'
+            </summary>
+        </member>
+    </members>
+</doc>
