@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9199BC80-0749-44BE-AD08-B854003A1A5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VOO_AS_SeramRegressionTests_1</RootNamespace>
+    <AssemblyName>VOO-AS-SeramRegressionTests_1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>
+    </LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Internal\Code Analysis\qaction-debug.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\VOO-AS-SeramRegressionTests_1.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Internal\Code Analysis\qaction-release.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\VOO-AS-SeramRegressionTests_1.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skyline.DataMiner.Files.protobufnet.10.0.0.5\lib\net462\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SLAnalyticsTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skyline.DataMiner.Files.SLAnalyticsTypes.10.0.0.5\lib\net462\SLAnalyticsTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="SLLoggerUtil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skyline.DataMiner.Files.SLLoggerUtil.10.0.0.5\lib\net462\SLLoggerUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="SLManagedAutomation, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Skyline.DataMiner.Files.SLManagedAutomation.10.0.0.5\lib\net462\SLManagedAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skyline.DataMiner.Files.SLNetTypes.10.0.0.5\lib\net462\SLNetTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="SLProtoBufLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skyline.DataMiner.Files.SLProtoBufLibrary.10.0.0.5\lib\net462\SLProtoBufLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <AdditionalFiles Include="stylecop.json" />
+    <Content Include=".editorconfig" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VOO-AS-SeramRegressionTests_1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DisLinkId="1" DisProjectType="automationScriptProject" DisLinkedXmlFile="..\VOO-AS-SeramRegressionTests.xml" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

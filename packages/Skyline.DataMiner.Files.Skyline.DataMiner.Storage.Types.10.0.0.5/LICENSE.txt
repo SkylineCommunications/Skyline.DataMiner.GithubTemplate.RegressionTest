@@ -1,0 +1,18 @@
+SKYLINE LIBRARY LICENSE
+
+1.	Applicability
+The software in this repository (hereafter the “Software”) is owned by Skyline Communications (hereafter the “Skyline”). The terms of this license govern your use of the Software. If you do not agree with the terms of this license, you may not use or exploit the Software in any other manner.
+2.	Grant of rights
+You may use the Software for the development, testing and validation of DataMiner packages only.
+You may not use this Software in any other manner unless you have obtained Skyline’s prior written authorization to do so.
+It is forbidden to create derivative works of the Software.
+3.	Intellectual property
+Skyline owns the intellectual property rights vested in the Software. Skyline granting you access to the Software does not entail permission to utilize or otherwise manipulate the Software in contravention to this Library License. Skyline reserves the right to pursue legal action against you in case of breach of its intellectual property rights. 
+4.	No warranty
+Skyline provides the Software ‘as is’, without any warranty of any kind.
+5.	Limitation of liability
+Within the maximum possible extent under the applicable laws, Skyline disclaims all liability for the Software. 
+6.	Applicable laws and jurisdiction
+This license shall be governed by the laws of Belgium. Any dispute shall be submitted to the exclusive jurisdiction of the competent courts of Gent, division Kortrijk, Belgium
+
+
