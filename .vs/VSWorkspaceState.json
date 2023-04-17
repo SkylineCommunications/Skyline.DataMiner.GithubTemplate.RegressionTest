@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Library",
+    "\\Library\\Consts"
   ],
+  "SelectedNode": "\\Library\\Consts\\TestInfoConsts.cs",
   "PreviewInSolutionExplorer": false
 }

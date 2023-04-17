@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
-	<Name>RT_VOO_Seram_Offload-CheckFileCreation</Name>
-	<Description>Regression Test to validate if the offload files are created on a daily basis.</Description>
+	<Name>RT_Ziine_Seram_Offload-CheckFileCreation</Name>
+	<Description>Example Regression Test to validate something.</Description>
 	<Type>Automation</Type>
 	<Author>SKYLINE2\JarnoLE</Author>
 	<CheckSets>FALSE</CheckSets>
@@ -18,7 +18,7 @@
 
 	<Script>
 		<Exe id="1" type="csharp">
-			<Value><![CDATA[[Project:RT_VOO_Seram_Offload-CheckFileCreation_1]]]></Value>
+			<Value><![CDATA[[Project:RT_Ziine_MyFirstRegressionTest_1]]]></Value>
 			<!--<Param type="debug">true</Param>-->
 			<Message></Message>
 		</Exe>

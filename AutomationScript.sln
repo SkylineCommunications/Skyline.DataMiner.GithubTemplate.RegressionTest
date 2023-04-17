@@ -23,23 +23,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analy
 		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VOO-AS-SeramRegressionTests", "VOO-AS-SeramRegressionTests", "{13CC89DA-C959-4F48-BE8B-974F79955F38}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ziine-AS-RegressionTests", "Ziine-AS-RegressionTests", "{13CC89DA-C959-4F48-BE8B-974F79955F38}"
 	ProjectSection(SolutionItems) = preProject
-		VOO-AS-SeramRegressionTests.xml = VOO-AS-SeramRegressionTests.xml
+		RT_Ziine_Seram_Offload-CheckFileCreation.xml = RT_Ziine_Seram_Offload-CheckFileCreation.xml
+		Ziine-AS-RegressionTests.xml = Ziine-AS-RegressionTests.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{962AC17B-90EB-4934-81E0-8626FBBEA4E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VOO-AS-SeramRegressionTests_1", "VOO-AS-SeramRegressionTests_1\VOO-AS-SeramRegressionTests_1.csproj", "{9199BC80-0749-44BE-AD08-B854003A1A5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziine-AS-RegressionTests_1", "VOO-AS-SeramRegressionTests_1\Ziine-AS-RegressionTests_1.csproj", "{9199BC80-0749-44BE-AD08-B854003A1A5E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RT_VOO_Seram_Offload-CheckFileCreation", "RT_VOO_Seram_Offload-CheckFileCreation", "{77137461-8422-4CE2-AF0D-03F9439732EF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RT_Ziine_MyFirstRegressionTest", "RT_Ziine_MyFirstRegressionTest", "{77137461-8422-4CE2-AF0D-03F9439732EF}"
 	ProjectSection(SolutionItems) = preProject
-		RT_VOO_Seram_Offload-CheckFileCreation.xml = RT_VOO_Seram_Offload-CheckFileCreation.xml
+		RT_Ziine_Seram_Offload-CheckFileCreation.xml = RT_Ziine_Seram_Offload-CheckFileCreation.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{D77DABF5-3BBF-4E07-9A0D-D85CE2277E4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RT_VOO_Seram_Offload-CheckFileCreation_1", "RT_VOO_Seram_Offload-CheckFileCreation_1\RT_VOO_Seram_Offload-CheckFileCreation_1.csproj", "{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RT_Ziine_MyFirstRegressionTest_1", "RT_VOO_Seram_Offload-CheckFileCreation_1\RT_Ziine_MyFirstRegressionTest_1.csproj", "{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{BBA0DFAF-0684-406F-9A53-40FBC6B7D669}"
 EndProject

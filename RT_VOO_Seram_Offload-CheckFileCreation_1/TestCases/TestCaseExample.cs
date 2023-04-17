@@ -12,9 +12,9 @@
 
 	using Skyline.DataMiner.Automation;
 
-	internal class TestCaseOffloadCheckFileCreation : ITestCase
+	internal class TestCaseExample : ITestCase
 	{
-		public TestCaseOffloadCheckFileCreation(string name)
+		public TestCaseExample(string name)
 		{
 			Name = name;
 		}

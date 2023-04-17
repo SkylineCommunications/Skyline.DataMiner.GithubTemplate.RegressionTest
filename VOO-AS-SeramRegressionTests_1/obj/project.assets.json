@@ -1980,11 +1980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\VOO-AS-SeramRegressionTests_1\\VOO-AS-SeramRegressionTests_1.csproj",
+      "projectUniqueName": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\VOO-AS-SeramRegressionTests_1\\Ziine-AS-RegressionTests_1.csproj",
       "projectName": "VOO-AS-SeramRegressionTests_1",
-      "projectPath": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\VOO-AS-SeramRegressionTests_1\\VOO-AS-SeramRegressionTests_1.csproj",
+      "projectPath": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\VOO-AS-SeramRegressionTests_1\\Ziine-AS-RegressionTests_1.csproj",
       "packagesPath": "C:\\Users\\JarnoLE\\.nuget\\packages\\",
-      "outputPath": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\VOO-AS-SeramRegressionTests_1\\obj\\",
+      "outputPath": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\VOO-AS-SeramRegressionTests_1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

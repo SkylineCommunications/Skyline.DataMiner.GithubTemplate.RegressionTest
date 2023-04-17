@@ -58,8 +58,8 @@ using Skyline.DataMiner.Automation;
 /// </summary>
 public class Script
 {
-	private const string TestName = "RT_VOO_Seram_Offload-CheckFileCreation";
-	private const string TestDescription = "Regression Test to validate if the offload files are created on a daily basis.";
+	private const string TestName = "RT_Ziine_MyFirstRegressionTest";
+	private const string TestDescription = "Regression Test to validate something.";
 
 	/// <summary>
 	/// The Script entry point.
@@ -69,8 +69,8 @@ public class Script
 	{
 		Test myTest = new Test(TestName, TestDescription);
 		myTest.AddTestCase(
-			new TestCaseOffloadCheckFileCreation("Test 1"),
-			new TestCaseOffloadCheckFileCreation("Test 2"));
+			new TestCaseExample("Test 1"),
+			new TestCaseExample("Test 2"));
 
 		myTest.Execute(engine);
 		myTest.PublishResults(engine);

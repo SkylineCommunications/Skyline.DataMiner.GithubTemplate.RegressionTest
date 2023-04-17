@@ -65,7 +65,7 @@ public class Script
 	/// <param name="engine">Link with SLAutomation process.</param>
 	public void Run(IEngine engine)
 	{
-		TryExecuteScript(engine, "RT_VOO_Seram_Offload-CheckFileCreation");
+		TryExecuteScript(engine, "RT_Ziine_MyFirstRegressionTest");
 	}
 
 	private static void TryExecuteScript(IEngine engine, string scriptName)

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
-	<Name>VOO-AS-SeramRegressionTests</Name>
+	<Name>Ziine-AS-RegressionTests</Name>
 	<Description>This script is used to execute the different RT use cases.</Description>
 	<Type>Automation</Type>
 	<Author>SKYLINE2\JarnoLE</Author>
@@ -18,7 +18,7 @@
 
 	<Script>
 		<Exe id="1" type="csharp">
-			<Value><![CDATA[[Project:VOO-AS-SeramRegressionTests_1]]]></Value>
+			<Value><![CDATA[[Project:Ziine-AS-RegressionTests_1]]]></Value>
 			<!--<Param type="debug">true</Param>-->
 			<Message></Message>
 		</Exe>

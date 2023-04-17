@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mGTtzc1OyLdLaDFaNdVb/rwLkZLzlWmphbYQsxvYTpt1sIHN34gcNvbqsebHqGNAXAUm7lACoDQpsqd5RWtNvQ==",
+  "dgSpecHash": "GKQEcyUYb+2Or3YhQi6RAgl2KMXG0GhKfQynWhY1OVzxKTGZWGF6fezllMUOLlGvDsDhWq7nmw83o/ROa74P8w==",
   "success": true,
-  "projectFilePath": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\VOO-AS-SeramRegressionTests_1\\VOO-AS-SeramRegressionTests_1.csproj",
+  "projectFilePath": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\VOO-AS-SeramRegressionTests_1\\Ziine-AS-RegressionTests_1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JarnoLE\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\JarnoLE\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",

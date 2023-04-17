@@ -2052,11 +2052,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\RT_VOO_Seram_Offload-CheckFileCreation_1\\RT_VOO_Seram_Offload-CheckFileCreation_1.csproj",
+      "projectUniqueName": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\RT_VOO_Seram_Offload-CheckFileCreation_1\\RT_Ziine_MyFirstRegressionTest_1.csproj",
       "projectName": "RT_VOO_Seram_Offload-CheckFileCreation_1",
-      "projectPath": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\RT_VOO_Seram_Offload-CheckFileCreation_1\\RT_VOO_Seram_Offload-CheckFileCreation_1.csproj",
+      "projectPath": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\RT_VOO_Seram_Offload-CheckFileCreation_1\\RT_Ziine_MyFirstRegressionTest_1.csproj",
       "packagesPath": "C:\\Users\\JarnoLE\\.nuget\\packages\\",
-      "outputPath": "C:\\DEV\\Github\\VOO-AS-SeramRegressionTests\\RT_VOO_Seram_Offload-CheckFileCreation_1\\obj\\",
+      "outputPath": "C:\\DEV\\Github\\SkylineCommunications\\Ziine-AS-RegressionTests\\RT_VOO_Seram_Offload-CheckFileCreation_1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
