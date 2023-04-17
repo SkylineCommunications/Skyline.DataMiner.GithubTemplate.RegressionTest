@@ -41,12 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{D77D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RT_VOO_Seram_Offload-CheckFileCreation_1", "RT_VOO_Seram_Offload-CheckFileCreation_1\RT_VOO_Seram_Offload-CheckFileCreation_1.csproj", "{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library2", "Library2", "{BBA0DFAF-0684-406F-9A53-40FBC6B7D669}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consts", "Consts", "{B67A779F-AE30-4058-AF7F-0D909988996F}"
-	ProjectSection(SolutionItems) = preProject
-		..\SkylineCommunications\YLE-AS-LOC_RegressionTests\Library\Tests\TestInfoConsts.cs = ..\SkylineCommunications\YLE-AS-LOC_RegressionTests\Library\Tests\TestInfoConsts.cs
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{BBA0DFAF-0684-406F-9A53-40FBC6B7D669}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Library", "Library\Library.shproj", "{0D197FF4-225F-41A0-B0C2-02E031C066DD}"
 EndProject
@@ -76,7 +71,6 @@ Global
 		{77137461-8422-4CE2-AF0D-03F9439732EF} = {AD2AA03C-FB74-42D8-8FE0-E038DD5F1F24}
 		{D77DABF5-3BBF-4E07-9A0D-D85CE2277E4F} = {77137461-8422-4CE2-AF0D-03F9439732EF}
 		{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12} = {D77DABF5-3BBF-4E07-9A0D-D85CE2277E4F}
-		{B67A779F-AE30-4058-AF7F-0D909988996F} = {BBA0DFAF-0684-406F-9A53-40FBC6B7D669}
 		{0D197FF4-225F-41A0-B0C2-02E031C066DD} = {BBA0DFAF-0684-406F-9A53-40FBC6B7D669}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
@@ -84,5 +78,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Library\Library.projitems*{0d197ff4-225f-41a0-b0c2-02e031c066dd}*SharedItemsImports = 13
+		Library\Library.projitems*{1f328cb2-2466-4cad-bf2c-cbfd7c69ba12}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

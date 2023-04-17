@@ -1,6 +1,8 @@
 ﻿namespace Library.QAPortal
 {
-    using QAPortalAPI.APIHelper;
+	using System;
+
+	using QAPortalAPI.APIHelper;
     using QAPortalAPI.Models.ReportingModels;
     using Skyline.DataMiner.Automation;
 
@@ -12,11 +14,10 @@
         public QAPortal(IEngine engine)
         {
             this.engine = engine;
-
             configuration = QaPortalConfiguration.GetConfiguration(out var e);
             if (e != null)
             {
-                engine.Log($"Exception retrieving QAPortal configuration: {e}");
+                throw new Exception($"Exception retrieving QAPortal configuration: {e}");
             }
         }
 

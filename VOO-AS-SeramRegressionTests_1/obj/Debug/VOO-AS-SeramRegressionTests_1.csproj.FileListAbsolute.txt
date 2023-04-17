@@ -114,15 +114,6 @@ C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debu
 C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\ICSharpCode.SharpZipLib.pdb
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\ICSharpCode.SharpZipLib.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\Newtonsoft.Json.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\SLManagedAutomation.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\SLNetTypes.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Buffers.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Memory.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Numerics.Vectors.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\obj\Debug\VOO-AS-SeramRegressionTests_1.csproj.AssemblyReference.cache
 C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\obj\Debug\VOO-AS-SeramRegressionTests_1.csproj.CoreCompileInputs.cache
 C:\DEV\Github\VOO-AS-SeramRegressionTests\VOO-AS-SeramRegressionTests_1\obj\Debug\VOO-AS-SeramRegressionTests_1.csproj.CopyComplete
