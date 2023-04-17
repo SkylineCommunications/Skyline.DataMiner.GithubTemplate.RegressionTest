@@ -3,52 +3,53 @@
 	using System;
 
 	using QAPortalAPI.APIHelper;
-    using QAPortalAPI.Models.ReportingModels;
-    using Skyline.DataMiner.Automation;
+	using QAPortalAPI.Models.ReportingModels;
 
-    internal class QAPortal
-    {
-        private readonly IEngine engine;
-        private readonly QaPortalConfiguration configuration;
+	using Skyline.DataMiner.Automation;
 
-        public QAPortal(IEngine engine)
-        {
-            this.engine = engine;
-            configuration = QaPortalConfiguration.GetConfiguration(out var e);
-            if (e != null)
-            {
-                throw new Exception($"Exception retrieving QAPortal configuration: {e}");
-            }
-        }
+	internal class QAPortal
+	{
+		private readonly IEngine engine;
+		private readonly QaPortalConfiguration configuration;
 
-        public void PublishReport(TestReport report)
-        {
-            QaPortalApiHelper helper;
-            if (configuration.ClientId == null)
-            {
-                helper = new QaPortalApiHelper(engine.GenerateInformation, configuration.Path, string.Empty, string.Empty);
-            }
-            else
-            {
-                helper = new QaPortalApiHelper(
-                  engine.GenerateInformation,
-                  configuration.Path,
-                  configuration.ClientId,
-                  configuration.ApiKey,
-                  PlainBodyEmail);
-            }
+		public QAPortal(IEngine engine)
+		{
+			this.engine = engine;
+			configuration = QaPortalConfiguration.GetConfiguration(out var e);
+			if (e != null)
+			{
+				throw new Exception($"Exception retrieving QAPortal configuration: {e}");
+			}
+		}
 
-            helper.PostResult(report);
-        }
+		public void PublishReport(TestReport report)
+		{
+			QaPortalApiHelper helper;
+			if (configuration.ClientId == null)
+			{
+				helper = new QaPortalApiHelper(engine.GenerateInformation, configuration.Path, string.Empty, string.Empty);
+			}
+			else
+			{
+				helper = new QaPortalApiHelper(
+				  engine.GenerateInformation,
+				  configuration.Path,
+				  configuration.ClientId,
+				  configuration.ApiKey,
+				  PlainBodyEmail);
+			}
 
-        private void PlainBodyEmail(string message, string subject, string to)
-        {
-            EmailOptions emailOptions = new EmailOptions(message, subject, to)
-            {
-                SendAsPlainText = true,
-            };
+			helper.PostResult(report);
+		}
 
-            engine.SendEmail(emailOptions);
-        }
-    }
+		private void PlainBodyEmail(string message, string subject, string to)
+		{
+			EmailOptions emailOptions = new EmailOptions(message, subject, to)
+			{
+				SendAsPlainText = true,
+			};
+
+			engine.SendEmail(emailOptions);
+		}
+	}
 }

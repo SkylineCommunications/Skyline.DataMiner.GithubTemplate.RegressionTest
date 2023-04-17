@@ -69,11 +69,8 @@ public class Script
 	{
 		Test myTest = new Test(TestName, TestDescription);
 		myTest.AddTestCase(
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""));
+			new TestCaseOffloadCheckFileCreation("Test 1"),
+			new TestCaseOffloadCheckFileCreation("Test 2"));
 
 		myTest.Execute(engine);
 		myTest.PublishResults(engine);
