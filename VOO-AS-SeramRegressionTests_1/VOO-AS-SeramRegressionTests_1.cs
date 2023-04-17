@@ -50,10 +50,9 @@ DATE		VERSION		AUTHOR			COMMENTS
 */
 
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
+
 using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Messages;
 
 /// <summary>
 /// DataMiner Script Class.
@@ -64,8 +63,30 @@ public class Script
 	/// The Script entry point.
 	/// </summary>
 	/// <param name="engine">Link with SLAutomation process.</param>
-	public void Run(Engine engine)
+	public void Run(IEngine engine)
 	{
+		TryExecuteScript(engine, "RT_VOO_Seram_Offload-CheckFileCreation");
+	}
 
+	private static void TryExecuteScript(IEngine engine, string scriptName)
+	{
+		// execute the Take script and pass the source and destination to disconnect
+		var executeTakeScriptMessage = new ExecuteScriptMessage(scriptName)
+		{
+			DataMinerID = -1,
+			Options = new SA(new[]
+			{
+				"OPTIONS:0",
+				"CHECKSETS:FALSE",
+				"EXTENDED_ERROR_INFO",
+				"DEFER:FALSE",
+			}),
+		};
+
+		var response = (ExecuteScriptResponseMessage)engine.SendSLNetSingleResponseMessage(executeTakeScriptMessage);
+		if (response.HadError)
+		{
+			engine.Log(String.Join(";", response.ErrorMessages));
+		}
 	}
 }

@@ -1,0 +1,2 @@
+C:\DEV\Github\VOO-AS-SeramRegressionTests\RT_VOO_Seram_Offload-CheckFileCreation_1\obj\Debug\RT_VOO_Seram_Offload-CheckFileCreation_1.csproj.AssemblyReference.cache
+C:\DEV\Github\VOO-AS-SeramRegressionTests\RT_VOO_Seram_Offload-CheckFileCreation_1\obj\Debug\RT_VOO_Seram_Offload-CheckFileCreation_1.csproj.CoreCompileInputs.cache
