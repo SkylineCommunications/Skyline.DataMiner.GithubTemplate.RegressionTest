@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)QAPortal\QAPortal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QAPortal\QaPortalConfiguration.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tests\ITest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests\ITestCase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tests\Test.cs" />
   </ItemGroup>
 </Project>

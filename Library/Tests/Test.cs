@@ -10,16 +10,14 @@
 	using QAPortalAPI.Models.ReportingModels;
 
 	using Skyline.DataMiner.Automation;
-	using Skyline.DataMiner.Core.DataMinerSystem.Automation;
 	using Skyline.DataMiner.Net.Messages;
 
 	internal class Test : ITest
 	{
-		private TestReport report;
 		private readonly string name;
 		private readonly string description;
-
-		private List<ITestCase> testCases;
+		private readonly List<ITestCase> testCases;
+		private TestReport report;
 
 		public Test(string name, string description)
 		{
@@ -58,7 +56,18 @@
 
 			foreach (var testCase in testCases)
 			{
-				this.report.TryAddTestCase(testCase.Execute(engine));
+				try
+				{
+					var testCaseReport = testCase.Execute(engine);
+					if (!this.report.TryAddTestCase(testCaseReport, out string errorMessage))
+					{
+						throw new Exception(errorMessage);
+					}
+				}
+				catch (Exception e )
+				{
+					engine.ExitFail(e.ToString());
+				}
 			}
 
 			return this.report;

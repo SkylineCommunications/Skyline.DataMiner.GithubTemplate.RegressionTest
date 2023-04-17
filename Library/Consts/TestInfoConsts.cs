@@ -7,7 +7,8 @@
 
 	internal static class TestInfoConsts
 	{
-		internal static string Contact = "squad.deploy-tomahawk@skyline.be";
-		internal static List<int> ProjectIds = new List<int> { 15474 };
+		internal static string Contact => "squad.deploy-tomahawk@skyline.be";
+
+		internal static List<int> ProjectIds => new List<int> { 15474 };
 	}
 }

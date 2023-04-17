@@ -49,24 +49,9 @@ DATE		VERSION		AUTHOR			COMMENTS
 ****************************************************************************
 */
 
-using System;
-using System.Collections.Generic;
-using Library.Consts;
-
-using System.Globalization;
-using System.Text;
-
-using QAPortalAPI.Models.ReportingModels;
-
-
-using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Net.Messages;
-
-using SLNetMessages = Skyline.DataMiner.Net.Messages;
 using Library.Tests;
 using RT_VOO_Seram_Offload_CheckFileCreation_1;
-using Library.QAPortal;
-using Skyline.DataMiner.Net.Records;
+using Skyline.DataMiner.Automation;
 
 /// <summary>
 /// DataMiner Script Class.
@@ -84,11 +69,8 @@ public class Script
 	{
 		Test myTest = new Test(TestName, TestDescription);
 		myTest.AddTestCase(
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""),
-			new TestCaseOffloadCheckFileCreation(""));
+			new TestCaseOffloadCheckFileCreation("Test 1"),
+			new TestCaseOffloadCheckFileCreation("Test 2"));
 
 		myTest.Execute(engine);
 		myTest.PublishResults(engine);
