@@ -24,6 +24,7 @@ This repository is built to have per regression test one Automation scriput that
     2. Rename XML file and its Name tag
     3. Rename CS file
     4. Edit afterwards the csproj and sln files of your repository (search all)
+8. Implement your test!
 
 ## Important to know
 
