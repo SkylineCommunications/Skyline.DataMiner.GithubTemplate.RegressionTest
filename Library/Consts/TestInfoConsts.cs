@@ -7,8 +7,8 @@
 
 	internal static class TestInfoConsts
 	{
-		internal static string Contact => "tribe.deploy-accelerate@skyline.be";
+		internal static string Contact => "@skyline.be"; // TODO: Change contact person
 
-		internal static List<int> ProjectIds => new List<int> { 14076 };
+		internal static List<int> ProjectIds => new List<int> { -1 }; // TODO: Change project ID
 	}
 }
