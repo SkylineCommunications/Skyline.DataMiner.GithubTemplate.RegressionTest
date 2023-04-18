@@ -9,5 +9,7 @@
         string Name { get; set; }
 
         TestCaseReport Execute(IEngine engine);
+
+        PerformanceTestCaseReport ExecutePerformance(IEngine engine);
     }
 }

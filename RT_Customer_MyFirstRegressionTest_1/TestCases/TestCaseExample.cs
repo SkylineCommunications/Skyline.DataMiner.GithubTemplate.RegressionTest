@@ -24,7 +24,18 @@
 		public TestCaseReport Execute(IEngine engine)
 		{
 			// TODO: Implement your test case
-			return TestCaseReport.GetSuccessTestCase(Name);
+			// The below is an example.
+			var isSuccess = true;
+			if (isSuccess) 
+			{
+				return TestCaseReport.GetSuccessTestCase(Name);
+			}
+			else
+			{
+				return TestCaseReport.GetFailTestCase(Name, "Failed example");
+			}
 		}
+
+		public PerformanceTestCaseReport ExecutePerformance(IEngine engine) => throw new NotImplementedException();
 	}
 }
