@@ -10,15 +10,20 @@ This repository is built to have per regression test one Automation scriput that
 
 1. Follow the steps described at: [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template)
 2. While creating the new repository, take into account the [GitHub Repository Guidelines](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Github/Use_Github_Guidelines.html) described in the DataMiner Docs. 
-  2.1 Suggested Naming Convention: {customerAcronym}-AS-RegressionTests
-  2.2 Add/Change the license according to what is aggreed with the customer
-  2.3 Add Github repository topics: dataminer-automation-script, dataminer-regression-test
+    1. Suggested Naming Convention: {customerAcronym}-AS-RegressionTests
+    2. Add/Change the license according to what is aggreed with the customer
+    3. Add Github repository topics: dataminer-automation-script, dataminer-regression-test
 3. Clone your repository onto your local machine
 4. Open the AutomationScript.sln Visual Studio Solution
 5. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
 6. There are two Automation Scripts automatically added
-  6.1 Ziine-AS-RegressionTests: This optional script can be used to automatically run all Regression Tests on your system. You should add the names of the regression tests scripts on here
-  6.2 RT_Ziine_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
+    1. Ziine-AS-RegressionTests: This optional script can be used to automatically run all Regression Tests on your system. You should add the names of the regression tests scripts on here
+    2. RT_Ziine_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
+7. Rename all Automation Scripts (_Customer_ should have the right abbreviation)
+    1. Rename VS Project
+    2. Rename XML file and its Name tag
+    3. Rename CS file
+    4. Edit afterwards the csproj and sln files of your repository (search all)
 
 ## Important to know
 
@@ -29,7 +34,7 @@ This repository is built to have per regression test one Automation scriput that
 
 Following use cases are currently automatically tested:
 
-### RT_Ziine_MyFirstRegressionTest
+### RT_Customer_MyFirstRegressionTest
 
 | Name | Description |
 |--|--|
