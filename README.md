@@ -1,4 +1,4 @@
-# Ziine-AS-RegressionTests
+# Customer-AS-RegressionTests
 
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SkylineCommunications_YLE-AS-RegressionTests&metric=alert_status&token=22a547c07150f6ec9c7e326e72ab3061e2b69a0b)](https://sonarcloud.io/summary/new_code?id=SkylineCommunications_YLE-AS-RegressionTests)
