@@ -33,7 +33,7 @@
 			{
 				if (testCase == null || String.IsNullOrWhiteSpace(testCase.Name))
 				{
-					continue;
+					// We should not do anything
 				}
 				else if (this.testCases.FirstOrDefault(x => x.Name.Equals(testCase.Name)) != null)
 				{
@@ -61,7 +61,7 @@
 					var testCaseReport = testCase.Execute(engine);
 					if (!this.report.TryAddTestCase(testCaseReport, out string errorMessage))
 					{
-						throw new Exception(errorMessage);
+						engine.ExitFail(errorMessage);
 					}
 				}
 				catch (Exception e )

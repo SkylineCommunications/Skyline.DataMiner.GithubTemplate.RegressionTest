@@ -18,7 +18,7 @@
 			configuration = QaPortalConfiguration.GetConfiguration(out var e);
 			if (e != null)
 			{
-				throw new Exception($"Exception retrieving QAPortal configuration: {e}");
+				throw e;
 			}
 		}
 
