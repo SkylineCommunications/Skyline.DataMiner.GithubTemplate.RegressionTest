@@ -25,11 +25,14 @@ This repository is built to have per regression test one Automation scriput that
     3. Rename CS file
     4. Edit afterwards the csproj and sln files of your repository (search all)
 8. Implement your test!
-
+9. Deploy your test + Configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json
+    1. An example can be found under this repository Documentation/Examples/QaPortalConfiguration.json
+    
 ## Important to know
 
 1. Makes sure to include a nugget package through [PackageReference](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files). This is already configured in this template, so nothing to change.
 2. A [Shared Project Library](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows#what-is-a-shared-project) is used to use the same code accross multiple VS Projects (= Regression Tests = Automation Scripts).
+3. Don't forget to configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json (See How to get started).
 
 ## Regression Tests
 
