@@ -12,30 +12,37 @@
 
 	using Skyline.DataMiner.Automation;
 
-	internal class TestCaseExample : ITestCase
+	public class TestCaseExample : ITestCase
 	{
 		public TestCaseExample(string name)
 		{
+			if (String.IsNullOrWhiteSpace(name))
+			{
+				throw new ArgumentNullException("name");
+			}
+
 			Name = name;
 		}
 
 		public string Name { get; set; }
 
-		public TestCaseReport Execute(IEngine engine)
+		public TestCaseReport TestCaseReport { get; private set; }
+
+		public PerformanceTestCaseReport PerformanceTestCaseReport { get; private set; }
+
+		public void Execute(IEngine engine)
 		{
 			// TODO: Implement your test case
 			// The below is an example.
 			var isSuccess = true;
-			if (isSuccess) 
+			if (isSuccess)
 			{
-				return TestCaseReport.GetSuccessTestCase(Name);
+				TestCaseReport = TestCaseReport.GetSuccessTestCase(Name);
 			}
 			else
 			{
-				return TestCaseReport.GetFailTestCase(Name, "Failed example");
+				TestCaseReport = TestCaseReport.GetFailTestCase(Name, "Failed example");
 			}
 		}
-
-		public PerformanceTestCaseReport ExecutePerformance(IEngine engine) => throw new NotImplementedException();
 	}
 }

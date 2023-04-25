@@ -1,15 +1,17 @@
 ﻿namespace Library.Tests.TestCases
 {
-    using System;
-    using QAPortalAPI.Models.ReportingModels;
-    using Skyline.DataMiner.Automation;
+	using QAPortalAPI.Models.ReportingModels;
 
-    internal interface ITestCase
-    {
-        string Name { get; set; }
+	using Skyline.DataMiner.Automation;
 
-        TestCaseReport Execute(IEngine engine);
+	internal interface ITestCase
+	{
+		string Name { get; set; }
 
-        PerformanceTestCaseReport ExecutePerformance(IEngine engine);
-    }
+		TestCaseReport TestCaseReport { get; }
+
+		PerformanceTestCaseReport PerformanceTestCaseReport { get; }
+
+		void Execute(IEngine engine);
+	}
 }
