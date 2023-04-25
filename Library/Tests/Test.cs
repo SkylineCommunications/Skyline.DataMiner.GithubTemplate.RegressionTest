@@ -58,13 +58,25 @@
 			{
 				try
 				{
-					var testCaseReport = testCase.Execute(engine);
-					if (!this.report.TryAddTestCase(testCaseReport, out string errorMessage))
+					testCase.Execute(engine);
+					if (testCase.TestCaseReport != null && !this.report.TryAddTestCase(testCase.TestCaseReport, out string errorMessage))
 					{
 						engine.ExitFail(errorMessage);
 					}
+
+					if (testCase.PerformanceTestCaseReport != null)
+					{
+						if (!testCase.PerformanceTestCaseReport.IsValid(out string validationInfo))
+						{
+							engine.ExitFail(validationInfo);
+						}
+						else
+						{
+							this.report.PerformanceTestCases.Add(testCase.PerformanceTestCaseReport);
+						}
+					}
 				}
-				catch (Exception e )
+				catch (Exception e)
 				{
 					engine.ExitFail(e.ToString());
 				}
@@ -75,8 +87,8 @@
 
 		public void PublishResults(IEngine engine)
 		{
-			var qaPortal = new QAPortal.QAPortal(engine);
-			qaPortal.PublishReport(report);
+			var portal = new QAPortal.QAPortal(engine);
+			portal.PublishReport(report);
 		}
 
 		private string GetAgentWhereScriptIsRunning(IEngine engine)
