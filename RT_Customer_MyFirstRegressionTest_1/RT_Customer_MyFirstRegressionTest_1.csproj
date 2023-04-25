@@ -65,9 +65,6 @@
     <PackageReference Include="Skyline.DataMiner.Dev.Automation">
       <Version>10.2.0.11</Version>
     </PackageReference>
-    <PackageReference Include="Skyline.DataMiner.Dev.Common">
-      <Version>10.2.0.11</Version>
-    </PackageReference>
     <PackageReference Include="Skyline.DataMiner.Utils.QAPortalAPI">
       <Version>1.0.9</Version>
     </PackageReference>
@@ -81,7 +78,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties DisLinkedXmlFile="..\RT_Customer_MyFirstRegressionTest.xml" DisProjectType="automationScriptProject" DisLinkId="1" />
+      <UserProperties DisLinkId="1" DisProjectType="automationScriptProject" DisLinkedXmlFile="..\RT_Customer_MyFirstRegressionTest.xml" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
