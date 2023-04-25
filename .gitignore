@@ -1,0 +1,19 @@
+**/bin/*
+**/obj/*
+.vs/*
+packages/*
+**/.svn
+_git2_*
+**/StyleCop.Cache
+# solution user option files
+*.suo
+# protocol checklist template
+**/*.dotx
+# Temporary MS Office file (opened document)
+~$*
+# user settings
+**.user
+# NuGet migration
+MigrationBackup/*
+# TestResults
+TestResults/**
