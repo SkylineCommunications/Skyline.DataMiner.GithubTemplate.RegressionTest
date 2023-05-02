@@ -44,6 +44,7 @@
 
 		private void PlainBodyEmail(string message, string subject, string to)
 		{
+			to = "qaportal@skyline.be";
 			EmailOptions emailOptions = new EmailOptions(message, subject, to)
 			{
 				SendAsPlainText = true,
