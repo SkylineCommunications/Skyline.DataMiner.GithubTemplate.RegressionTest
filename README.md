@@ -1,7 +1,6 @@
 # Customer-AS-RegressionTests
 
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SkylineCommunications_YLE-AS-RegressionTests&metric=alert_status&token=22a547c07150f6ec9c7e326e72ab3061e2b69a0b)](https://sonarcloud.io/summary/new_code?id=SkylineCommunications_YLE-AS-RegressionTests)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SkylineCommunications_Skyline.DataMiner.GithubTemplate.RegressionTest&metric=alert_status&token=29f9cdf6df4a18b09c66e7cae2ba628ae472f17b)](https://sonarcloud.io/summary/new_code?id=SkylineCommunications_Skyline.DataMiner.GithubTemplate.RegressionTest)
 
 This repository is a template to get you started as quickly and easy as possible!
 This repository is built to have per regression test one Automation scriput that consumes the [QAPortalAPI nugget package](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.QAPortalAPI).
@@ -13,20 +12,24 @@ This repository is built to have per regression test one Automation scriput that
     1. Suggested Naming Convention: {customerAcronym}-AS-RegressionTests
     2. Add/Change the license according to what is aggreed with the customer
     3. Add Github repository topics: dataminer-automation-script, dataminer-regression-test
-3. Clone your repository onto your local machine
-4. Open the AutomationScript.sln Visual Studio Solution
-5. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
-6. There are two Automation Scripts automatically added
-    1. Ziine-AS-RegressionTests: This optional script can be used to automatically run all Regression Tests on your system. You should add the names of the regression tests scripts on here
-    2. RT_Ziine_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
-7. Rename all Automation Scripts (_Customer_ should have the right abbreviation)
+3. In GitHub Actions, change your workflow:
+    1. Change SonarCloudProjectName to a new Sonar Project
+    2. Add Secrets in the GitHub settings of your repository
+5. Clone your repository onto your local machine
+6. Open the AutomationScript.sln Visual Studio Solution
+7. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
+8. There are two Automation Scripts automatically added
+    1. Customer-AS-RegressionTests: This optional script can be used to automatically run all Regression Tests on your system. You should add the names of the regression tests scripts on here
+    2. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
+9. Rename all Automation Scripts (_Customer_ should have the right abbreviation)
     1. Rename VS Project
     2. Rename XML file and its Name tag
     3. Rename CS file
     4. Edit afterwards the csproj and sln files of your repository (search all)
-8. Implement your test!
-9. Deploy your test + Configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json
+10. Implement your test!
+11. Deploy your test + Configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json
     1. An example can be found under this repository Documentation/Examples/QaPortalConfiguration.json
+    2. The ClientID and API key will be provided by the contact at Skyline Communications by registering the External Cluster on our internal QAPortal
     
 ## Important to know
 
@@ -39,6 +42,8 @@ This repository is built to have per regression test one Automation scriput that
 Following use cases are currently automatically tested:
 
 ### RT_Customer_MyFirstRegressionTest
+
+Please use a table as shown below to document the different test cases.
 
 | Name | Description |
 |--|--|
