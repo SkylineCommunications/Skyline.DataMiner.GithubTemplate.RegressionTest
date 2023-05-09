@@ -14,7 +14,7 @@ This repository is built to have per regression test one Automation scriput that
     3. Add Github repository topics: dataminer-automation-script, dataminer-regression-test
 3. In GitHub Actions, change your workflow:
     1. Change SonarCloudProjectName to a new Sonar Project
-    2. Add Secrets in the GitHub settings of your repository
+    2. Add Secrets in the GitHub settings of your repository (SONAR_TOKEN, DATAMINER_DEPLOY_KEY)
 5. Clone your repository onto your local machine
 6. Open the AutomationScript.sln Visual Studio Solution
 7. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
