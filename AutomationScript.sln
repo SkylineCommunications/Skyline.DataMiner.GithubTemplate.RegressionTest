@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{15F70340-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{6213860E-85FF-4341-A69D-544E59B67BB8}"
 	ProjectSection(SolutionItems) = preProject
+		Documentation\Examples\QaPortalConfiguration.json = Documentation\Examples\QaPortalConfiguration.json
 		Documentation\readme.txt = Documentation\readme.txt
 	EndProjectSection
 EndProject
