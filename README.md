@@ -23,10 +23,11 @@ This repository is built to have per regression test one Automation scriput that
     1. Customer-AS-RegressionTests: This optional script can be used to automatically run all Regression Tests on your system. You should add the names of the regression tests scripts on here
     2. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
 10. Rename all Automation Scripts (_Customer_ should have the right abbreviation)
-    1. Rename VS Project
-    2. Rename XML file and its Name tag
-    3. Rename CS file
-    4. Edit afterwards the csproj and sln files of your repository (search all)
+    1. Required: Change Script XML file : DMSScript.Name tag
+    2. Optional: Rename VS Project
+    3. Optional: Rename Script XML file 
+    4. Optional: Rename CS file
+    5. Optional: Edit afterwards the csproj and sln files of your repository (search all)
 11. Implement your test!
 12. Deploy your test + Configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json
     1. An example can be found under this repository Documentation/Examples/QaPortalConfiguration.json
