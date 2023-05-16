@@ -3,8 +3,9 @@
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
-    using System.Text;
-    using Library.Consts;
+	using System.Text;
+
+	using Library.Consts;
 	using Library.Tests.TestCases;
 
 	using QAPortalAPI.Models.ReportingModels;
@@ -94,16 +95,16 @@
 			}
 			catch (Exception e)
 			{
-                engine.Log($"Reporting results for {report.TestInfo.TestName} to QAPortal failed: {e}");
-            }
+				engine.Log($"Reporting results for {report.TestInfo.TestName} to QAPortal failed: {e}");
+			}
 
 			var isSuccessful = report.TestResult == QAPortalAPI.Enums.Result.Success;
-            var reason = GenerateReason();
-            engine.Log($"{report.TestInfo.TestName} {report.TestResult}: {reason}");
+			var reason = GenerateReason();
+			engine.Log($"{report.TestInfo.TestName} {report.TestResult}: {reason}");
 
-            engine.AddScriptOutput("Success", isSuccessful.ToString());
-            engine.AddScriptOutput("Reason", reason);
-        }
+			engine.AddScriptOutput("Success", isSuccessful.ToString());
+			engine.AddScriptOutput("Reason", reason);
+		}
 
 		private string GetAgentWhereScriptIsRunning(IEngine engine)
 		{
@@ -122,17 +123,17 @@
 			return agentName;
 		}
 
-        private string GenerateReason()
-        {
-            var reason = new StringBuilder();
-            reason.AppendLine(report.TestInfo.TestDescription);
+		private string GenerateReason()
+		{
+			var reason = new StringBuilder();
+			reason.AppendLine(report.TestInfo.TestDescription);
 
-            foreach (var testCaseReport in report.TestCases)
-            {
-                reason.AppendLine($"{testCaseReport.TestCaseName}|{testCaseReport.TestCaseResult}|{testCaseReport.TestCaseResultInfo}");
-            }
+			foreach (var testCaseReport in report.TestCases)
+			{
+				reason.AppendLine($"{testCaseReport.TestCaseName}|{testCaseReport.TestCaseResult}|{testCaseReport.TestCaseResultInfo}");
+			}
 
-            return reason.ToString();
-        }
-    }
+			return reason.ToString();
+		}
+	}
 }
