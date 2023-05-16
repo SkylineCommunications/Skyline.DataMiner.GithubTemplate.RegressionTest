@@ -19,10 +19,9 @@ This repository is built to have per regression test one Automation scriput that
 6. Open the AutomationScript.sln Visual Studio Solution
 7. Rebuild the solution to register correctly all pre-installed nugget packages
 8. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
-9. There are two Automation Scripts automatically added
-    1. Customer-AS-RegressionTests: This optional script can be used to automatically run all Regression Tests on your system. You should add the names of the regression tests scripts on here
-    2. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
-10. Rename all Automation Scripts (_Customer_ should have the right abbreviation)
+9. There is an Automation Script automatically added
+    1. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
+10. Rename the Automation Script (_Customer_ should have the right abbreviation)
     1. Required: Change Script XML file : DMSScript.Name tag
     2. Optional: Rename VS Project
     3. Optional: Rename Script XML file 

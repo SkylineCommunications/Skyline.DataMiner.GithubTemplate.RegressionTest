@@ -24,15 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analy
 		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer-AS-RegressionTests", "Customer-AS-RegressionTests", "{13CC89DA-C959-4F48-BE8B-974F79955F38}"
-	ProjectSection(SolutionItems) = preProject
-		Customer-AS-RegressionTests.xml = Customer-AS-RegressionTests.xml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{962AC17B-90EB-4934-81E0-8626FBBEA4E0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer-AS-RegressionTests_1", "Customer-AS-RegressionTests_1\Customer-AS-RegressionTests_1.csproj", "{9199BC80-0749-44BE-AD08-B854003A1A5E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RT_Customer_MyFirstRegressionTest", "RT_Customer_MyFirstRegressionTest", "{77137461-8422-4CE2-AF0D-03F9439732EF}"
 	ProjectSection(SolutionItems) = preProject
 		RT_Customer_MyFirstRegressionTest.xml = RT_Customer_MyFirstRegressionTest.xml
@@ -54,10 +45,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9199BC80-0749-44BE-AD08-B854003A1A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9199BC80-0749-44BE-AD08-B854003A1A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9199BC80-0749-44BE-AD08-B854003A1A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9199BC80-0749-44BE-AD08-B854003A1A5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -72,9 +59,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EFE45FA4-F3B4-4D30-BF52-3BD7991D1C4C} = {C485F01C-B639-44B1-AC23-DD0A986CF9C4}
-		{13CC89DA-C959-4F48-BE8B-974F79955F38} = {AD2AA03C-FB74-42D8-8FE0-E038DD5F1F24}
-		{962AC17B-90EB-4934-81E0-8626FBBEA4E0} = {13CC89DA-C959-4F48-BE8B-974F79955F38}
-		{9199BC80-0749-44BE-AD08-B854003A1A5E} = {962AC17B-90EB-4934-81E0-8626FBBEA4E0}
 		{77137461-8422-4CE2-AF0D-03F9439732EF} = {AD2AA03C-FB74-42D8-8FE0-E038DD5F1F24}
 		{D77DABF5-3BBF-4E07-9A0D-D85CE2277E4F} = {77137461-8422-4CE2-AF0D-03F9439732EF}
 		{1F328CB2-2466-4CAD-BF2C-CBFD7C69BA12} = {D77DABF5-3BBF-4E07-9A0D-D85CE2277E4F}

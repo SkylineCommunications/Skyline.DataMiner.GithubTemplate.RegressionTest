@@ -2865,24 +2865,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JarnoLE\\.nuget\\packages\\": {},
+    "C:\\Users\\Joey\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DEV\\Github\\SkylineCommunications\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1Tests\\RT_Customer_MyFirstRegressionTest_1Tests.csproj",
+      "projectUniqueName": "C:\\git\\github\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1Tests\\RT_Customer_MyFirstRegressionTest_1Tests.csproj",
       "projectName": "RT_Customer_MyFirstRegressionTest_1Tests",
-      "projectPath": "C:\\DEV\\Github\\SkylineCommunications\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1Tests\\RT_Customer_MyFirstRegressionTest_1Tests.csproj",
-      "packagesPath": "C:\\Users\\JarnoLE\\.nuget\\packages\\",
-      "outputPath": "C:\\DEV\\Github\\SkylineCommunications\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1Tests\\obj\\",
+      "projectPath": "C:\\git\\github\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1Tests\\RT_Customer_MyFirstRegressionTest_1Tests.csproj",
+      "packagesPath": "C:\\Users\\Joey\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\github\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1Tests\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\JarnoLE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2891,14 +2891,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://devcore3/nuget": {}
+        "http://devcore3:81/nuget": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\DEV\\Github\\SkylineCommunications\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1\\RT_Customer_MyFirstRegressionTest_1.csproj": {
-              "projectPath": "C:\\DEV\\Github\\SkylineCommunications\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1\\RT_Customer_MyFirstRegressionTest_1.csproj"
+            "C:\\git\\github\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1\\RT_Customer_MyFirstRegressionTest_1.csproj": {
+              "projectPath": "C:\\git\\github\\Skyline.DataMiner.GithubTemplate.RegressionTest\\RT_Customer_MyFirstRegressionTest_1\\RT_Customer_MyFirstRegressionTest_1.csproj"
             }
           }
         }
@@ -2959,5 +2959,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://devcore3:81/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }
