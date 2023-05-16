@@ -21,7 +21,7 @@ This repository is built to have per regression test one Automation scriput that
 8. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
 9. There is an Automation Script automatically added
     1. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
-10. Rename all Automation Scripts (_Customer_ should have the right abbreviation)
+10. Rename the Automation Script (_Customer_ should have the right abbreviation)
     1. Required: Change Script XML file : DMSScript.Name tag
     2. Optional: Rename VS Project
     3. Optional: Rename Script XML file 
