@@ -49,6 +49,7 @@ DATE		VERSION		AUTHOR			COMMENTS
 ****************************************************************************
 */
 
+using System;
 using Library.Tests;
 using RT_Customer_MyFirstRegressionTest_1;
 using Skyline.DataMiner.Automation;
@@ -67,12 +68,23 @@ public class Script
 	/// <param name="engine">Link with SLAutomation process.</param>
 	public void Run(IEngine engine)
 	{
-		Test myTest = new Test(TestName, TestDescription);
-		myTest.AddTestCase(
-			new TestCaseExample("Test 1"),
-			new TestCaseExample("Test 2"));
+		try
+		{
+			Test myTest = new Test(TestName, TestDescription);
+			myTest.AddTestCase(
+				new TestCaseExample("Test 1"),
+				new TestCaseExample("Test 2"));
 
-		myTest.Execute(engine);
-		myTest.PublishResults(engine);
+			myTest.Execute(engine);
+			myTest.PublishResults(engine);
+		}
+		catch (Exception e)
+		{
+			engine.Log($"{TestName} failed: {e}");
+		}
+		finally
+		{
+			// TODO: add cleanup here (if applicable)
+		}
 	}
 }
