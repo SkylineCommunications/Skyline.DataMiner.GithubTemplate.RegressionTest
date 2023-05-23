@@ -25,8 +25,8 @@ This repository is built to have per regression test one Automation scriput that
 6. Open the AutomationScript.sln Visual Studio Solution
 7. Rebuild the solution to register correctly all pre-installed nugget packages
 8. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
-       1. The 'Contact' field must be your squad or domain e-mail. This field is only used for apointing the test to the right squad or domain. The QAPortal can be configured to notify your on regression test reports.
-       2. The Project IDs is typically the project where you are working on delivering a solution. If it's for testing purpose, please specify the M&S project of the customer.
+    1. The 'Contact' field must be your squad or domain e-mail. This field is only used for apointing the test to the right squad or domain. The QAPortal can be configured to notify your on regression test reports.
+    2. The Project IDs is typically the project where you are working on delivering a solution. If it's for testing purpose, please specify the M&S project of the customer.
 10. There is an Automation Script automatically added
     1. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
 11. Rename the Automation Script (_Customer_ should have the right abbreviation)
