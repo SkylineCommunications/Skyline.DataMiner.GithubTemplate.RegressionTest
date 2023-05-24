@@ -20,7 +20,7 @@ This repository is built to have per regression test one Automation scriput that
         4. You will be presented your SONAR_TOKEN
         5. Note! When specifying this information and commit the changes, your GitHub Action will run and link/register it to SonarCloud. The GitHub Action will fail because of this, but feel free to rerun your GitHub action and it should be working.
     3. Add Secrets in the GitHub settings of your repository (SONAR_TOKEN, DATAMINER_DEPLOY_KEY)
-       1. DATAMINER_DEPLOY_KEY can be created for you on admin.dataminer.service if your system is connected to dataminer.services (This repository only includes CI, so the key is not used for deploying the artificat). *Important*: This is required at this moment to get the GitHub Action to work.
+       1. DATAMINER_DEPLOY_KEY can be created for you on admin.dataminer.service if your system is connected to dataminer.services (This repository only includes CI, so the key is not used for deploying the artificat). **Important**: This is required at this moment to get the GitHub Action to work.
 5. Clone your repository onto your local machine
 6. Open the AutomationScript.sln Visual Studio Solution
 7. Rebuild the solution to register correctly all pre-installed nugget packages
