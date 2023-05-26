@@ -29,7 +29,7 @@
 			{
 				helper = new QaPortalApiHelper(engine.GenerateInformation, configuration.Path, string.Empty, string.Empty);
 			}
-			else
+			else if (configuration.Path.Contains("@"))
 			{
 				helper = new QaPortalApiHelper(
 				  engine.GenerateInformation,
@@ -37,6 +37,14 @@
 				  configuration.ClientId,
 				  configuration.ApiKey,
 				  PlainBodyEmail);
+			}
+			else
+			{
+				helper = new QaPortalApiHelper(
+				  engine.GenerateInformation,
+				  configuration.Path,
+				  configuration.ClientId,
+				  configuration.ApiKey);
 			}
 
 			helper.PostResult(report);
