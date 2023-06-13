@@ -3,7 +3,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SkylineCommunications_Skyline.DataMiner.GithubTemplate.RegressionTest&metric=alert_status&token=29f9cdf6df4a18b09c66e7cae2ba628ae472f17b)](https://sonarcloud.io/summary/new_code?id=SkylineCommunications_Skyline.DataMiner.GithubTemplate.RegressionTest)
 
 This repository is a template to get you started as quickly and easy as possible!
-This repository is built to have per regression test one Automation scriput that consumes the [QAPortalAPI nugget package](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.QAPortalAPI).
+This repository is built to have per regression test one Automation scriput that consumes the [QAPortalAPI NuGet package](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.QAPortalAPI).
 
 ## How to get started
 
@@ -23,7 +23,7 @@ This repository is built to have per regression test one Automation scriput that
        1. DATAMINER_DEPLOY_KEY can be created for you on admin.dataminer.service if your system is connected to dataminer.services (This repository only includes CI, so the key is not used for deploying the artificat). **Important**: This is required at this moment to get the GitHub Action to work.
 5. Clone your repository onto your local machine
 6. Open the AutomationScript.sln Visual Studio Solution
-7. Rebuild the solution to register correctly all pre-installed nugget packages
+7. Rebuild the solution to register correctly all pre-installed NuGet packages
 8. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
     1. The 'Contact' field must be your squad or domain e-mail. This field is only used for apointing the test to the right squad or domain. The QAPortal can be configured to notify your on regression test reports.
     2. The Project IDs is typically the project where you are working on delivering a solution. If it's for testing purpose, please specify the M&S project of the customer.
@@ -49,7 +49,7 @@ This repository is built to have per regression test one Automation scriput that
     
 ## Important to know
 
-1. Makes sure to include a nugget package through [PackageReference](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files). This is already configured in this template, so nothing to change.
+1. Makes sure to include a NuGet package through [PackageReference](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files). This is already configured in this template, so nothing to change.
 2. A [Shared Project Library](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows#what-is-a-shared-project) is used to use the same code accross multiple VS Projects (= Regression Tests = Automation Scripts).
 3. Don't forget to configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json (See How to get started).
 
