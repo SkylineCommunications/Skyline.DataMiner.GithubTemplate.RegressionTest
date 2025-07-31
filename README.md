@@ -2,56 +2,64 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SkylineCommunications_Skyline.DataMiner.GithubTemplate.RegressionTest&metric=alert_status&token=29f9cdf6df4a18b09c66e7cae2ba628ae472f17b)](https://sonarcloud.io/summary/new_code?id=SkylineCommunications_Skyline.DataMiner.GithubTemplate.RegressionTest)
 
-This repository is a template to get you started as quickly and easy as possible!
-This repository is built to have per regression test one Automation scriput that consumes the [QAPortalAPI NuGet package](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.QAPortalAPI).
+This repository is a template to get you started as quickly and easily as possible!  
+Each regression test is implemented as a separate Automation Script that consumes the [QAPortalAPI NuGet package](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.QAPortalAPI).
 
 ## How to get started
 
 1. Follow the steps described at: [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template)
-2. While creating the new repository, take into account the [GitHub Repository Guidelines](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Github/Use_Github_Guidelines.html) described in the DataMiner Docs. 
-    1. Suggested Naming Convention: {customerAcronym}-AS-RegressionTests
-    2. Add/Change the license according to what is aggreed with the customer
-    3. Add Github repository topics: dataminer-automation-script, dataminer-regression-test
-3. In GitHub Actions, change your workflow:
-    1. Change SonarCloudProjectName to a new Sonar Project, by registering your project here:
-        1. https://sonarcloud.io/projects/create
-        2. Search your GitHub repository
-        3. Configure project with GitHub Actions
-        4. You will be presented your SONAR_TOKEN
-        5. Note! When specifying this information and commit the changes, your GitHub Action will run and link/register it to SonarCloud. The GitHub Action will fail because of this, but feel free to rerun your GitHub action and it should be working.
-    3. Add Secrets in the GitHub settings of your repository (SONAR_TOKEN, DATAMINER_DEPLOY_KEY)
-       1. DATAMINER_DEPLOY_KEY can be created for you on admin.dataminer.service if your system is connected to dataminer.services (This repository only includes CI, so the key is not used for deploying the artificat). **Important**: This is required at this moment to get the GitHub Action to work.
-5. Clone your repository onto your local machine
-6. Open the AutomationScript.sln Visual Studio Solution
-7. Rebuild the solution to register correctly all pre-installed NuGet packages
-8. Change the constant values dependent on your project/customer at: Library\Consts\TestInfoConsts.cs
-    1. The 'Contact' field must be your squad or domain e-mail. This field is only used for apointing the test to the right squad or domain. The QAPortal can be configured to notify your on regression test reports.
-    2. The Project IDs is typically the project where you are working on delivering a solution. If it's for testing purpose, please specify the M&S project of the customer.
-10. There is an Automation Script automatically added
-    1. RT_Customer_MyFirstRegressionTest: This is your first regression test script. In the script you should change the TestName, TestDescription and add all test cases that want to test. A test case is typically a dedicated class file stored in the the TestCases folder of your project. Here you define the actual test logic.
-11. Rename the Automation Script (_Customer_ should have the right abbreviation)
-    1. Required: Change Script XML file : DMSScript.Name tag
-    2. Optional: Rename VS Project
-    3. Optional: Rename Script XML file 
-    4. Optional: Rename CS file
-    5. Optional: Edit afterwards the csproj and sln files of your repository (search all)
-12. Implement your test in the Execute method of your testcase!
-13. Deploy your test + Configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json
-    1. An example can be found under this repository Documentation/Examples/QaPortalConfiguration.json
-    2. The ClientID and API key will be provided by the contact at Skyline Communications by registering the External Cluster on our internal QAPortal
-    3. The Path is dependent on how you want to post results
-        1. 	Internal system
-            1. 	API = http://qaportal.skyline.local/api/public/results/addresult
-            2. 	e-mail = qaportal@skyline.be (note: SMTP settings have to be added in DataMiner.xml)
-        3. 	External system
-            1. API = https://qaportal.skyline.be/forward/save
-            2. e-mail = qaportal@skyline.be (note: SMTP settings have to be added in DataMiner.xml)
-    
-## Important to know
+2. While creating the new repository, take into account the [GitHub Repository Guidelines](https://docs.dataminer.services/develop/CICD/Skyline%20Communications/Github/Use_Github_Guidelines.html) described in the DataMiner Docs:  
+    - Suggested Naming Convention: `{customerAcronym}-T-RegressionTests`  
+    - Add/Change the license according to what is agreed with the customer  
+    - Add GitHub repository topics: `dataminer-automation-script`, `dataminer-regression-test`  
+3. In GitHub Actions, update your workflow:
+    - Change `SonarCloudProjectName` to the new SonarCloud project by registering it here:  
+      https://sonarcloud.io/projects/create  
+      Search your GitHub repository and follow the steps to set up GitHub Actions.  
+      You’ll receive a `SONAR_TOKEN` — use this as a secret.
+    - Add secrets in GitHub repo settings:
+        - `SONAR_TOKEN`
+        - `DATAMINER_DEPLOY_KEY` (can be created via admin.dataminer.services if your system is connected to dataminer.services)
+4. Clone the repository locally.
+5. Open the solution in Visual Studio and rebuild it to restore NuGet packages.
+6. Update constants in `Library\Consts\TestInfoConsts.cs` based on the customer/project:
+    - The `Contact` field must be your squad or domain e-mail.
+    - The `ProjectIds` should reference the delivery project, or the M&S project for general tests.
+7. A sample Automation Script is included:
+    - `RT_Customer_MyFirstRegressionTest`: Replace `Customer` with the appropriate abbreviation.
+8. Rename the default Automation Script project and related files:
+    - Update the `DMSScript.Name` tag in the XML.
+    - Optional: Rename the `.csproj`, `.xml`, and `.cs` files.
+9. Add more Automation Script projects if needed using the same structure.
+10. Rename the solution and folder to follow the same naming convention:  
+    - Example: `{customerAcronym}-T-RegressionTests`
 
-1. Makes sure to include a NuGet package through [PackageReference](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files). This is already configured in this template, so nothing to change.
-2. A [Shared Project Library](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows#what-is-a-shared-project) is used to use the same code accross multiple VS Projects (= Regression Tests = Automation Scripts).
-3. Don't forget to configure C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json (See How to get started).
+## Deploy and configure
+
+1. Deploy your test scripts to the DataMiner system.
+2. Configure `C:\Skyline DataMiner\QAPortal\QaPortalConfiguration.json`
+    - An example is available in `Documentation/Examples/QaPortalConfiguration.json`
+    - Contact Skyline to receive a valid `ClientID` and `API key`
+    - Supported endpoints:
+        - **Internal system**
+            - API: `http://qaportal.skyline.local/api/public/results/addresult`
+            - Email: `qaportal@skyline.be` *(note: SMTP settings must be added in `DataMiner.xml`)*
+        - **External system**
+            - API: `https://qaportal.skyline.be/forward/save`
+            - Email: `qaportal@skyline.be` *(note: SMTP settings must be added in `DataMiner.xml`)*
+
+> **Optional Tooling**  
+> After deploying your regression test package, you may also deploy the [Regression Test Management solution](https://catalog.dataminer.services/details/27636bb4-e3ce-4a2a-bd28-fe514a4ac5e7).  
+> This solution enables you to manage and visualize regression test results directly within your DataMiner System. It serves as a suitable alternative for teams that prefer not to use the QA Portal or are unable to do so
+
+## Important notes
+
+- NuGet packages are included via [PackageReference](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) — already configured in the template.
+- A [Shared Project](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/shared-projects?tabs=windows#what-is-a-shared-project) is used to share code across Automation Script projects.
+- Don’t forget to configure `QaPortalConfiguration.json` as described above.
+
+> **Note:** This template is a [Skyline DataMiner Package Project](https://docs.dataminer.services/develop/CICD/Skyline%20DataMiner%20Software%20Development%20Kit/skyline_dataminer_sdk_dataminer_package_project.html).  
+> Every time you build the solution, it generates a `.dmapp` package that can be directly copied and deployed to a DataMiner Agent (DMA).
 
 ## Regression Tests
 

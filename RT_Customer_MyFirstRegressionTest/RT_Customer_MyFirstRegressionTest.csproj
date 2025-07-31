@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Skyline.DataMiner.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DataMinerType>AutomationScript</DataMinerType>
+    <GenerateDataMinerPackage>False</GenerateDataMinerPackage>
+    <MinimumRequiredDmVersion>10.3.0.0 - 12752</MinimumRequiredDmVersion>
+    <Version>1.0.0</Version>
+    <VersionComment>Initial Version</VersionComment>
+  </PropertyGroup>
+  <Import Project="..\Library\Library.projitems" Label="Shared" />
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="SharpZipLib">
+      <Version>1.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Skyline.DataMiner.Dev.Automation">
+      <Version>10.2.0.11</Version>
+    </PackageReference>
+    <PackageReference Include="Skyline.DataMiner.Dev.Common">
+      <Version>10.2.0.11</Version>
+    </PackageReference>
+    <PackageReference Include="Skyline.DataMiner.Utils.QAPortalAPI">
+      <Version>1.0.9</Version>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers">
+      <Version>1.1.118</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="2.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</Project>

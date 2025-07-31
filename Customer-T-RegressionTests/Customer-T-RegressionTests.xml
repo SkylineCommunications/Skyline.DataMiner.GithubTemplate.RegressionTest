@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+	<Name>Customer-T-RegressionTests</Name>
+	<Description></Description>
+	<Type>Automation</Type>
+	<Author></Author>
+	<CheckSets>FALSE</CheckSets>
+	<Folder></Folder>
+
+	<Protocols>
+	</Protocols>
+
+	<Memory>
+	</Memory>
+
+	<Parameters>
+	</Parameters>
+
+	<Script>
+		<Exe id="1" type="csharp">
+			<Value><![CDATA[[Project:Customer-T-RegressionTests]]]></Value>
+			<!--<Param type="debug">true</Param>-->
+			<Message></Message>
+		</Exe>
+	</Script>
+</DMSScript>
