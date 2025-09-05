@@ -39,7 +39,7 @@ title: Customer-T-RegressionTests
 # [Optional]
 # General information about the Catalog item.
 #   Max length: 100,000 characters
-short_description: This is a custom solution for DataMiner.
+short_description: Automated regression tests for validating DataMiner solutions. Ensures system functionality and stability after upgrades, deployments, or configuration changes.
 
 # [Optional]
 # A valid URL that points to the source code.
@@ -68,4 +68,6 @@ owners:
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
 tags:
-  - dataminer
+  - Regression-Testing
+  - Automation
+  - Quality-Assurance

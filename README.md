@@ -15,23 +15,18 @@ Each regression test is implemented as a separate Automation Script that consume
 3. In GitHub Actions, update your workflow:
     - Change `SonarCloudProjectName` to the new SonarCloud project by registering it here:  
       https://sonarcloud.io/projects/create  
-      Search your GitHub repository and follow the steps to set up GitHub Actions.  
-      You’ll receive a `SONAR_TOKEN` — use this as a secret.
-    - Add secrets in GitHub repo settings:
-        - `SONAR_TOKEN`
-        - `DATAMINER_DEPLOY_KEY` (can be created via admin.dataminer.services if your system is connected to dataminer.services)
 4. Clone the repository locally.
 5. Open the solution in Visual Studio and rebuild it to restore NuGet packages.
 6. Update constants in `Library\Consts\TestInfoConsts.cs` based on the customer/project:
     - The `Contact` field must be your squad or domain e-mail.
     - The `ProjectIds` should reference the delivery project, or the M&S project for general tests.
 7. A sample Automation Script is included:
-    - `RT_Customer_MyFirstRegressionTest`: Replace `Customer` with the appropriate abbreviation.
-8. Rename the default Automation Script project and related files:
-    - Update the `DMSScript.Name` tag in the XML.
-    - Optional: Rename the `.csproj`, `.xml`, and `.cs` files.
-9. Add more Automation Script projects if needed using the same structure.
-10. Rename the solution and folder to follow the same naming convention:  
+   - `RT_Customer_MyFirstRegressionTest`: To adjust the name, open the file `RT_Customer_MyFirstRegressionTest.xml` in DIS.  
+     Click the dropdown arrow next to the **Name** field at the top, then select **Change Script Name...**.  
+     Enter the new name (replace `Customer` with the customer abbreviation).  
+     This will automatically update the `<Name>` tag in the XML as well as all related project references and files.
+8. Add more Automation Script projects if needed using the same structure.
+9. Rename the solution and folder to follow the same naming convention:  
     - Example: `{customerAcronym}-T-RegressionTests`
 
 ## Deploy and configure

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
 	<Name>RT_Customer_MyFirstRegressionTest</Name>
 	<Description>Example Regression Test to validate something.</Description>
