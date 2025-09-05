@@ -17,3 +17,5 @@ _git2_*
 MigrationBackup/*
 # TestResults
 TestResults/**
+*.pubxml
+*.pubxml.user
