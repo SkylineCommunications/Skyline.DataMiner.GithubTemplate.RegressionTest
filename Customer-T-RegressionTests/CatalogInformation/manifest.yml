@@ -1,0 +1,73 @@
+# [Required]
+# Possible values for the Catalog item that can be deployed on a DataMiner System:
+#   - Automation: If the Catalog item is a general-purpose DataMiner Automation script.
+#   - Ad Hoc Data Source: If the Catalog item is a DataMiner Automation script designed for an ad hoc data source integration.
+#   - ChatOps Extension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
+#   - Connector: If the Catalog item is a DataMiner XML connector.
+#   - Custom Solution: If the Catalog item is a DataMiner Solution.
+#   - Data Query: If the Catalog item is a GQI data query.
+#   - Data Transformer: Includes a data transformer that enables you to modify data using a GQI data query before making it available to users in low-code apps or dashboards.
+#   - Dashboard: If the Catalog item is a DataMiner dashboard.
+#   - DevTool: If the Catalog item is a DevTool.
+#   - Learning & Sample: If the Catalog item is a sample.
+#   - Product Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific product.
+#   - Scripted Connector: If the Catalog item is a DataMiner scripted connector.
+#   - Standard Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
+#   - System Health: If the Catalog item is intended to monitor the health of a system.
+#   - User-Defined API: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
+#   - Visual Overview: If the Catalog item is a Microsoft Visio design.
+type: Custom Solution
+
+# [Required]
+# The ID of the Catalog item.
+# All registered versions for the same ID are shown together in the Catalog.
+# This ID cannot be changed.
+# If the ID is not filled in, the registration will fail with HTTP status code 500.
+# If the ID is filled in but does not exist yet, a new Catalog item will be registered with this ID.
+# If the ID is filled in but does exist, properties of the item will be overwritten.
+#   Must be a valid GUID.
+id: 
+
+# [Required]
+# The human-friendly name of the Catalog item.
+# Can be changed at any time.
+#   Max length: 100 characters.
+#   Cannot contain newlines.
+#   Cannot contain leading or trailing whitespace characters.
+title: Customer-T-RegressionTests
+
+# [Optional]
+# General information about the Catalog item.
+#   Max length: 100,000 characters
+short_description: Automated regression tests for validating DataMiner solutions. Ensures system functionality and stability after upgrades, deployments, or configuration changes.
+
+# [Optional]
+# A valid URL that points to the source code.
+#   A valid URL
+#   Max length: 2048 characters
+source_code_url:
+
+# [Optional]
+# A valid URL that points to documentation.
+#   A valid URL
+#   Max length: 2048 characters
+documentation_url: 
+
+# [Optional]
+# People who are responsible for this Catalog item. Might be developers, but this is not required.
+# Format: 'name <email> (URL)'
+#   The name is required; max 256 characters.
+#   The email and URL are optional, and should be in valid email/URL formats.
+owners:
+  - name: ''
+  
+# [Optional]
+# Tags that allow you to categorize your Catalog items.
+#   Max number of tags: 5
+#   Max length: 50 characters.
+#   Cannot contain newlines.
+#   Cannot contain leading or trailing whitespace characters.
+tags:
+  - Regression-Testing
+  - Automation
+  - Quality-Assurance
